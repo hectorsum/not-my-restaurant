@@ -1,0 +1,308 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/11/2020, 12:25:25 PM
+    Author     : hecto
+*/
+*{
+    margin:0px;
+}
+body{
+    height:100vh;
+    width:100vw;
+/*    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;*/
+    background: #cdcdcd;
+}
+label{
+    width:100%;
+    text-align: left;
+    font-weight: bold;
+}
+#carrito-comanda {
+  max-height: 220px;
+  min-height: 220px;
+  min-width: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: -20px;
+  display: flex;
+  align-items: flex-start; }
+
+#carrito-comanda::-webkit-scrollbar {
+  width: 5px; }
+
+#carrito-comanda::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+#carrito-comanda::-webkit-scrollbar-thumb {
+  background-color: rgba(34, 31, 31, 0.849); }
+
+#carrito-comanda thead th {
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+  background-color: #303030; }
+
+#carrito-comanda tbody td {
+  z-index: 0; }
+
+#carrito-comanda tbody {
+  margin-top: 20px; }
+
+#carrito-comanda td input {
+  background: transparent;
+  border: none;
+  text-align: center;
+  outline: none; 
+}
+.login-wrapper {
+  background-color: #EBEBEB;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh; 
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .login-wrapper .login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .login-wrapper .title {
+    position: relative;
+    color: #EBEBEB;
+    background-color: rgba(0, 0, 0, 0.781);
+    box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.6);
+    border-radius: 6px 6px 0px 0px;
+    width: 450px;
+    height: 50px;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid rgba(0, 0, 0, 0.404); }
+
+.text-olvido {
+  text-align: center;
+  margin-top: 10px; }
+
+.text-registro {
+  color: grey;
+  text-align: center;
+  margin-top: 20px; }
+
+.login-inputs {
+  background-color: white;
+  border-radius: 0px 0px 6px 6px;
+  width: 450px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+  .login-inputs .input-data {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px; }
+    .login-inputs .input-data input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid silver; }
+    .login-inputs .input-data input:focus ~ label,
+    .login-inputs .input-data input:valid ~ label {
+      transform: translateY(-20px);
+      font-size: 15px;
+      font-weight: bold;
+      color: grey; }
+    .login-inputs .input-data label {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      color: silver;
+      pointer-events: none;
+      transition: all 0.3s ease; }
+    .login-inputs .input-data .underline {
+      position: absolute;
+      bottom: 0px;
+      height: 2px;
+      width: 100%; }
+    .login-inputs .input-data .underline::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: black;
+      transform: scaleX(0);
+      transition: transform 0.3s ease; }
+    .login-inputs .input-data input:focus ~ .underline:before,
+    .login-inputs .input-data input:valid ~ .underline:before {
+      transform: scaleX(1); }
+#popup-add-producto {
+  height: 100%;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right:0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; }
+  .popup-add-producto .content-mantener-producto {
+    height: 40vh;
+    width: 40vw;
+    border-radius: 15px;
+    background-color: #E4DCC7; }
+    .popup-add-producto .content-mantener-producto .wrapper-content .inputs {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      .popup-add-producto .content-mantener-producto .wrapper-content .inputs * {
+        margin: 5px 0px; }
+    .popup-add-producto .content-mantener-producto .inputs-1 {
+      margin: 0px 5px 0px 0px; }
+    
+    .buscar-popup {
+  width: 35%;
+  height: 45%;
+  background-color: #E4DCC7;
+  border-radius: 8px; }
+  .buscar-popup .form-body {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .buscar-popup .form-body .mantener-heading-buscar {
+      color: black;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 5px; }
+    .buscar-popup .form-body #input-popup-buscar {
+      width: 80%; }
+  .buscar-popup #close-popup {
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    left: 95.5%;
+    bottom: 90%; }
+  .table-fixed {
+  overflow-y: auto;
+  margin-bottom: 20px;
+  overflow-x: auto; }
+  .table-fixed .table {
+    width: 100%; }
+
+.table-fixed-2 {
+  max-height: 300px;
+  width: 80%; }
+
+.table-fixed-popup-buscar {
+  max-height: 65%;
+  width: 80%; }
+
+.table-fixed thead th {
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+  background-color: #303030; }
+
+.table-fixed tbody td {
+  z-index: 0; }
+
+.table-fixed tbody {
+  margin-top: 20px; }
+
+.table-fixed::-webkit-scrollbar {
+  width: 5px; }
+
+.table-fixed::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.table-fixed::-webkit-scrollbar-thumb {
+  background-color: rgba(34, 31, 31, 0.849); }
+
+.input-search-container {
+  position: relative;
+  width: 80%;
+  min-width: 15%;
+  border-radius: 50px;
+  border: 2px solid #000;
+  padding: 5px 10px;
+  background-color: #fff;
+  display: flex; }
+  .input-search-container-elements {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle; }
+    .input-search-container-elements #search-input {
+      border: none;
+      width: 100%;
+      height: 100%;
+      padding: 0px 10px;
+      font-family: 'Nunito',sans-serif;
+      outline: none;
+      border-radius: 10px;
+      text-align: left; }
+    .input-search-container-elements tr td i {
+      display: flex;
+      align-self: center;
+      font-size: 20px;
+      color: black; }
+    
+    .buscar-popup #close-popup {
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    left: 66%;
+    bottom: 68%; }
+
+    
+    
+
+button[type='submit']{
+    outline: none;
+    border: none;
+}
+img{
+    height:60px;
+    width: 200px;
+}
+.nav-link{
+    background: transparent;
+}
+.cabecera{
+    display: grid;
+    grid-template-columns:20% 20% 20% 20% 20%;
+}
+.tabla-cursos{
+    display: grid;
+    grid-template-columns:20% 20% 20% 20% 20%;
+    border: 2px solid black;
+    background: grey;
+}
+.student-data{
+    display: grid;
+    grid-template-columns:150px 300px;
+    grid-template-rows:50% 50%;
+}
+.student-data div{
+    border: 1px solid black;
+}
+
+@media only screen and (max-width:220px){
+    img{
+        width:100%;
+        height:100%;
+        min-height: 60px;
+    }
+}
