@@ -90,7 +90,7 @@ public class L_Producto {
        } catch (Exception e) {}
     }
     public void consultarProductos(){
-        con.consulta("select * from V_PROCUCTO WHERE estado=1");
+        con.consulta("select * from V_PRODUCTO WHERE estado=1");
         Lproducto.clear();
         try {
            while (con.getRs().next()){

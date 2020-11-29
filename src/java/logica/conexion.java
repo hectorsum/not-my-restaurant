@@ -28,7 +28,7 @@ public class conexion {
             st=con.createStatement();
             System.out.println("Exito");
         } catch (Exception e) {
-            System.out.println("Fracaso");
+            System.out.println(e);
         }        
     }
     public conexion(String url,String sa,String pas,String dri) {
@@ -39,7 +39,7 @@ public class conexion {
             st=con.createStatement();
             System.out.println("Exito");
         } catch (Exception e) {
-            System.out.println("Fracaso");
+            System.out.println(e);
         }        
     }
     public void consulta(String qry){

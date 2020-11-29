@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.22/b-1.6.5/b-html5-1.6.5/b-print-1.6.5/datatables.min.css"/>
         <link rel="stylesheet" href="styles/style.css">
     </head>
-    <body class="container">
+    <body>
 <div class="login-wrapper">
   <div class="login-section">
     <div class="title">
